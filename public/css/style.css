@@ -9,3 +9,8 @@
   font-family: "Sour-gummy-italic";
   src: url('../font/SourGummy-Italic-VariableFont_wdth,wght.ttf') format('truetype');
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
