@@ -1,0 +1,11 @@
+/* Fonts */
+
+@font-face {
+  font-family: "Sour-gummy";
+  src: url('../font/SourGummy-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Sour-gummy-italic";
+  src: url('../font/SourGummy-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+}

@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import '../public/css/style.css'
+</script>
 
 <template>
   <nav>
