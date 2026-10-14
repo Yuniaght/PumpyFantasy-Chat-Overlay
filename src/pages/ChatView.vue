@@ -14,8 +14,6 @@ const client = new StreamerbotClient({
 )
 
 client.on('Twitch.ChatMessage', ({event, data}) => {
-  console.log(event)
-  console.log(data)
   let newMessage = {
     messageID: data.messageId,
     color: data.user.color,
@@ -28,14 +26,14 @@ client.on('Twitch.ChatMessage', ({event, data}) => {
 })
 
 client.on('YouTube.Message', ({event, data}) => {
-  console.log(event)
   console.log(data)
   let newMessage = {
     messageID: data.eventId,
+    color: '',
     name: data.user.name,
     type: event.source,
     message: data.parts,
-    cratedAt: data.createdAt
+    createdAt: data.createdAt
   }
   messageList.value.push(newMessage)
 })
@@ -46,16 +44,30 @@ onUnmounted(() => {
 </script>
 
 <template>
-<div>
-  <template v-for="n in 10" :key="n">
-    <DialogBubble :platform="n % 2 == 1 ? 'twitch' : 'youtube'" />
-  </template>
-  <div v-for="message in messageList">
-    <pre>{{ message }}</pre>
-  </div>
-</div>
+  <section class="chat-container">
+    <TransitionGroup name="fade" tag="div" class="chat-list">
+      <DialogBubble v-for="message, messageID in messageList" :key="messageID" :message="message" />
+    </TransitionGroup>
+  </section>
 </template>
 
 <style scoped> 
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.4s ease-out;
+}
 
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.chat-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
 </style>
