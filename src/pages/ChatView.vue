@@ -63,6 +63,14 @@ onUnmounted(() => {
   transform: translateY(100px);
 }
 
+.fade-move {
+  transition: transform 0.4s ease-out;
+}
+
+.fade-leave-active {
+  position: absolute;
+}
+
 .chat-container {
   height: 100vh;
   display: flex;
