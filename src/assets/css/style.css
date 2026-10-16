@@ -1,3 +1,6 @@
+/* Imports */
+@import url('./reset.css');
+
 /* Fonts */
 
 @font-face {
@@ -10,7 +13,8 @@
   src: url('../font/SourGummy-Italic-VariableFont_wdth,wght.ttf') format('truetype');
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
+/* Style */
+
+h1,h2,h3,h4,h5,h6,div,label,p,input {
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
