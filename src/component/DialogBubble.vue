@@ -105,7 +105,7 @@ div {
   margin-top: 36px;
   border-radius: 24px;
   padding: 24px;
-  padding-top: 3rem;
+  padding-top: calc(32px + ((v-bind(effectiveFontSizePseudo) - 1.75rem) * 0.75 ));
   margin-left: v-bind("message.type === 'YouTube' ? '0px' : '24px'");
   margin-right: v-bind("message.type === 'YouTube' ? '24px' : '0px'");
   background-color: v-bind(effectiveBubbleBgColor);
