@@ -1,0 +1,20 @@
+/* Imports */
+@import url('./reset.css');
+
+/* Fonts */
+
+@font-face {
+  font-family: "Sour-gummy";
+  src: url('../font/SourGummy-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Sour-gummy-italic";
+  src: url('../font/SourGummy-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+/* Style */
+
+h1,h2,h3,h4,h5,h6,div,label,p,input {
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
